@@ -304,8 +304,8 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
                         ),
                       ],
                     ),
-                    child: const Icon(
-                      FontAwesomeIcons.lock,
+                    child: const FaIcon(
+                    FontAwesomeIcons.lock,
                       color: Colors.red,
                       size: 60,
                     ),
@@ -609,7 +609,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
                     ),
                   ],
                 ),
-                child: Icon(
+                child: FaIcon(
                   widget.role.toLowerCase() == "vip"
                       ? FontAwesomeIcons.crown
                       : FontAwesomeIcons.userShield,
@@ -674,7 +674,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
             ),
             child: Column(
               children: [
-                const Icon(
+                const FaIcon(
                   FontAwesomeIcons.calendarAlt,
                   color: Colors.white,
                   size: 14,
@@ -731,7 +731,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
                   color: Colors.white.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(
+                child: const FaIcon(
                   FontAwesomeIcons.phone,
                   color: Colors.white,
                   size: 16,
@@ -774,7 +774,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
                   color: Colors.white.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: const Icon(
+                child: const FaIcon(
                   FontAwesomeIcons.globe,
                   color: Colors.white70,
                   size: 16,
@@ -823,7 +823,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
                   color: Colors.white.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(
+                child: const FaIcon(
                   FontAwesomeIcons.bug,
                   color: Colors.white,
                   size: 16,
@@ -892,7 +892,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
           const SizedBox(height: 10),
           Row(
             children: [
-              Icon(
+              FaIcon(
                 FontAwesomeIcons.infoCircle,
                 color: Colors.white.withOpacity(0.5),
                 size: 12,
@@ -941,7 +941,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
                   color: Colors.white.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(
+                child: const FaIcon(
                   FontAwesomeIcons.server,
                   color: Colors.white,
                   size: 16,
@@ -984,7 +984,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
                         AnimatedBuilder(
                           animation: _glowController,
                           builder: (context, child) {
-                            return Icon(
+                            return FaIcon(
                               FontAwesomeIcons.globe,
                               color: _senderType == "global"
                                   ? _themeColor
@@ -1039,7 +1039,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
                         AnimatedBuilder(
                           animation: _glowController,
                           builder: (context, child) {
-                            return Icon(
+                            return FaIcon(
                               FontAwesomeIcons.user,
                               color: _senderType == "private"
                                   ? _themeColor
@@ -1078,7 +1078,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
               padding: const EdgeInsets.only(top: 8.0),
               child: Row(
                 children: [
-                  Icon(
+                  FaIcon(
                     FontAwesomeIcons.infoCircle,
                     color: Colors.white.withOpacity(0.5),
                     size: 12,
@@ -1128,7 +1128,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
                   color: Colors.white.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(
+                child: const FaIcon(
                   FontAwesomeIcons.slidersH,
                   color: Colors.white,
                   size: 16,
@@ -1279,7 +1279,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
     );
   }
 
-  Widget _statusIndicator({required IconData icon, required String label, required bool isOnline}) {
+  Widget _statusIndicator({required FaIconData icon, required String label, required bool isOnline}) {
     return Column(
       children: [
         AnimatedBuilder(
@@ -1308,7 +1308,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
                 ]
                     : null,
               ),
-              child: Icon(
+              child: FaIcon(
                 icon,
                 color: isOnline ? Colors.white : Colors.white70,
                 size: 20,
@@ -1409,7 +1409,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
       ),
       child: Row(
         children: [
-          Icon(
+          FaIcon(
             FontAwesomeIcons.exclamationTriangle,
             color: Colors.white.withOpacity(0.5),
             size: 14,
@@ -1586,7 +1586,7 @@ class _CustomSuccessDialogState extends State<CustomSuccessDialog> with TickerPr
                               ),
                             ],
                           ),
-                          child: Icon(
+                          child: FaIcon(
                             FontAwesomeIcons.checkDouble,
                             color: _themeColor,
                             size: 40,

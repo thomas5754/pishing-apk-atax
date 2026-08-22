@@ -255,7 +255,7 @@ class _GroupBugPageState extends State<GroupBugPage> with TickerProviderStateMix
                         ),
                       ],
                     ),
-                    child: const Icon(
+                    child: const FaIcon(
                       FontAwesomeIcons.lock,
                       color: Colors.red,
                       size: 60,
@@ -548,7 +548,7 @@ class _GroupBugPageState extends State<GroupBugPage> with TickerProviderStateMix
                     ),
                   ],
                 ),
-                child: Icon(
+                child: FaIcon(
                   widget.role.toLowerCase() == "vip"
                       ? FontAwesomeIcons.crown
                       : FontAwesomeIcons.userShield,
@@ -613,7 +613,7 @@ class _GroupBugPageState extends State<GroupBugPage> with TickerProviderStateMix
             ),
             child: Column(
               children: [
-                const Icon(
+                const FaIcon(
                   FontAwesomeIcons.calendarAlt,
                   color: Colors.white,
                   size: 14,
@@ -670,7 +670,7 @@ class _GroupBugPageState extends State<GroupBugPage> with TickerProviderStateMix
                   color: Colors.white.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(
+                child: const FaIcon(
                   FontAwesomeIcons.users,
                   color: Colors.white,
                   size: 16,
@@ -713,7 +713,7 @@ class _GroupBugPageState extends State<GroupBugPage> with TickerProviderStateMix
                   color: Colors.white.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: const Icon(
+                child: const FaIcon(
                   FontAwesomeIcons.link,
                   color: Colors.white70,
                   size: 16,
@@ -732,7 +732,7 @@ class _GroupBugPageState extends State<GroupBugPage> with TickerProviderStateMix
             ),
             child: Row(
               children: [
-                Icon(
+                FaIcon(
                   FontAwesomeIcons.infoCircle,
                   color: _themeColor,
                   size: 16,
@@ -838,7 +838,7 @@ class _GroupBugPageState extends State<GroupBugPage> with TickerProviderStateMix
                 ]
                     : null,
               ),
-              child: Icon(
+              child: FaIcon(
                 icon,
                 color: isOnline ? Colors.white : Colors.white70,
                 size: 20,
@@ -939,7 +939,7 @@ class _GroupBugPageState extends State<GroupBugPage> with TickerProviderStateMix
       ),
       child: Row(
         children: [
-          Icon(
+          FaIcon(
             FontAwesomeIcons.exclamationTriangle,
             color: Colors.white.withOpacity(0.5),
             size: 14,
@@ -1114,7 +1114,7 @@ class _GroupBugSuccessDialogState extends State<GroupBugSuccessDialog> with Tick
                               ),
                             ],
                           ),
-                          child: Icon(
+                          child: FaIcon(
                             FontAwesomeIcons.checkDouble,
                             color: _themeColor,
                             size: 40,

@@ -675,11 +675,11 @@ class _DashboardPageState extends State<DashboardPage> with SingleTickerProvider
   }
 
   // Fungsi Pembantu untuk Top Menu di dalam News Carousel
-  Widget _buildFeatureIcon({required FaIconData icon, required String title, required String subtitle}) {
+  Widget _buildFeatureIcon({required Object icon, required String title, required String subtitle}) {
     return Expanded(
       child: Column(
         children: [
-          FaIcon(icon, color: const Color(0xFFE0E0E0), size: 26), // Abu-abu menyala
+          (icon is FaIconData ? FaIcon(icon, color: const Color(0xFFE0E0E0), size: 26) : Icon(icon as IconData, color: const Color(0xFFE0E0E0), size: 26)), // Abu-abu menyala
           const SizedBox(height: 10),
           Text(
             title,
@@ -1278,7 +1278,7 @@ class _DashboardPageState extends State<DashboardPage> with SingleTickerProvider
     );
   }
 
-  Widget _infoCard(IconData icon, String label, String value) {
+  Widget _infoCard(Object icon, String label, String value) {
     return Container(
       margin: const EdgeInsets.only(bottom: 10),
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
@@ -1289,7 +1289,7 @@ class _DashboardPageState extends State<DashboardPage> with SingleTickerProvider
       ),
       child: Row(
         children: [
-          FaIcon(icon, color: const Color(0xFFE0E0E0)), // Gray
+          (icon is FaIconData ? FaIcon(icon, color: const Color(0xFFE0E0E0)) : Icon(icon as IconData, color: const Color(0xFFE0E0E0))), // Gray
           const SizedBox(width: 10),
           Text("$label:", style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.bold)),
           const Spacer(),
@@ -1459,7 +1459,7 @@ class _DashboardPageState extends State<DashboardPage> with SingleTickerProvider
   }
 
   // --- NEW: Item Menu Utama dengan Style Aktif Hijau ---
-  Widget _assistiveMenuItem(FaIconData icon, String title, String page) {
+  Widget _assistiveMenuItem(Object icon, String title, String page) {
     bool isActive = _activePage == page; // Cek apakah menu ini sedang dibuka
 
     return Padding(

@@ -407,30 +407,28 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
             height: 40,
             decoration: BoxDecoration(
               color: isActive
-                  ? (isCurrent
                   ? _themeColor.withOpacity(0.2)
-                  : _themeColor.withOpacity(0.2))
                   : Colors.white.withOpacity(0.05),
               shape: BoxShape.circle,
               border: Border.all(
                 color: isActive
-                    ? (isCurrent
                     ? _themeColor.withOpacity(0.5)
-                    : _themeColor.withOpacity(0.5))
                     : Colors.white.withOpacity(0.2),
                 width: 2,
               ),
               boxShadow: isCurrent
                   ? [
-                BoxShadow(
-                  color: _themeColor.withOpacity(0.2 * _glowAnimation.value),
-                  blurRadius: 8,
-                  spreadRadius: 1,
-                )
-              ]
+                      BoxShadow(
+                        color: _themeColor.withOpacity(
+                          0.2 * _glowAnimation.value,
+                        ),
+                        blurRadius: 8,
+                        spreadRadius: 1,
+                      ),
+                    ]
                   : null,
             ),
-            child: Icon(
+            child: FaIcon(
               icon,
               color: isActive
                   ? (isCurrent ? Colors.white : _themeColor)
@@ -903,7 +901,11 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
     );
   }
 
-  Widget _statusIndicator({required FaIconData icon, required String label, required bool isOnline}) {
+  Widget _statusIndicator({
+    required FaIconData icon,
+    required String label,
+    required bool isOnline,
+  }) {
     return Column(
       children: [
         AnimatedBuilder(
@@ -913,26 +915,32 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: isOnline
-                    ? Colors.white.withOpacity(0.1 + 0.1 * _glowAnimation.value)
+                    ? Colors.white.withOpacity(
+                        0.1 + 0.1 * _glowAnimation.value,
+                      )
                     : Colors.white.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
                   color: isOnline
-                      ? Colors.white.withOpacity(0.3 + 0.2 * _glowAnimation.value)
+                      ? Colors.white.withOpacity(
+                          0.3 + 0.2 * _glowAnimation.value,
+                        )
                       : Colors.white.withOpacity(0.3),
                   width: 2,
                 ),
                 boxShadow: isOnline
                     ? [
-                  BoxShadow(
-                    color: _themeColor.withOpacity(0.1 * _glowAnimation.value),
-                    blurRadius: 8,
-                    spreadRadius: 1,
-                  )
-                ]
+                        BoxShadow(
+                          color: _themeColor.withOpacity(
+                            0.1 * _glowAnimation.value,
+                          ),
+                          blurRadius: 8,
+                          spreadRadius: 1,
+                        ),
+                      ]
                     : null,
               ),
-              child: Icon(
+              child: FaIcon(
                 icon,
                 color: isOnline ? Colors.white : Colors.white70,
                 size: 20,
@@ -954,7 +962,7 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
           width: 50,
           height: 3,
           decoration: BoxDecoration(
-            color: isOnline ? _themeColor : Colors.red.withOpacity(0.5),
+            color: isOnline ? _themeColor : Colors.white30,
             borderRadius: BorderRadius.circular(2),
           ),
         ),
