@@ -809,7 +809,7 @@ class _GroupBugPageState extends State<GroupBugPage> with TickerProviderStateMix
     );
   }
 
-  Widget _statusIndicator({required IconData icon, required String label, required bool isOnline}) {
+  Widget _statusIndicator({required FaIconData icon, required String label, required bool isOnline}) {
     return Column(
       children: [
         AnimatedBuilder(

@@ -1480,7 +1480,9 @@ class _DashboardPageState extends State<DashboardPage> with SingleTickerProvider
             ) : null, // Tidak ada background/border jika tidak aktif
             child: Row(
               children: [
-                FaIcon(icon, color: isActive ? const Color(0xFF25D366) : Colors.white70, size: 18),
+                (icon is FaIconData
+    ? FaIcon(icon, color: isActive ? const Color(0xFF25D366) : Colors.white70, size: 18)
+    : Icon(icon as IconData, color: isActive ? const Color(0xFF25D366) : Colors.white70, size: 18)),
                 const SizedBox(width: 16),
                 Expanded(
                   child: Text(
