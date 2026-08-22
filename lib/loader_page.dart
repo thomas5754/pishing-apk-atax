@@ -1355,7 +1355,7 @@ class _DashboardPageState extends State<DashboardPage> with SingleTickerProvider
                     tilePadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
                     childrenPadding: EdgeInsets.zero,
                     // Icon kiri
-                    leading: const Icon(FontAwesomeIcons.whatsapp, color: Colors.white70, size: 18),
+                    leading: const FaIcon(FontAwesomeIcons.whatsapp, color: Colors.white70, size: 18),
                     title: const Text("Bug Tools", style: TextStyle(color: Colors.white70, fontSize: 14, fontFamily: "ShareTechMono", letterSpacing: 1.0)),
                     // Icon kanan
                     trailing: Icon(

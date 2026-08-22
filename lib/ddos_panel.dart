@@ -849,7 +849,7 @@ class _AttackPanelState extends State<AttackPanel> with TickerProviderStateMixin
       ),
       child: Row(
         children: [
-          Icon(
+          FaIcon(
             FontAwesomeIcons.exclamationTriangle,
             color: primaryColor.withOpacity(0.7),
             size: 14,

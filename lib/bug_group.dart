@@ -901,7 +901,7 @@ class _GroupBugPageState extends State<GroupBugPage> with TickerProviderStateMix
                   strokeWidth: 2,
                 ),
               )
-                  : const Icon(FontAwesomeIcons.user, color: Colors.white, size: 18),
+                  : const FaIcon(FontAwesomeIcons.user, color: Colors.white, size: 18),
               label: Text(
                 _isSending ? "PROCESSING..." : "ATTACK GROUP",
                 style: const TextStyle(

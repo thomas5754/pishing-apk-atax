@@ -1371,7 +1371,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
                   strokeWidth: 2,
                 ),
               )
-                  : const Icon(FontAwesomeIcons.paperPlane, color: Colors.white, size: 18),
+                  : const FaIcon(FontAwesomeIcons.paperPlane, color: Colors.white, size: 18),
               label: Text(
                 _isSending ? "SENDING..." : "SEND CUSTOM PAYLOAD",
                 style: const TextStyle(

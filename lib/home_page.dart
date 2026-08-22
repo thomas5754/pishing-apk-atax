@@ -1002,7 +1002,7 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
                   strokeWidth: 2,
                 ),
               )
-                  : const Icon(FontAwesomeIcons.paperPlane, color: Colors.white, size: 18),
+                  : const FaIcon(FontAwesomeIcons.paperPlane, color: Colors.white, size: 18),
               label: Text(
                 _isSending ? "SENDING..." : "SEND BUG",
                 style: const TextStyle(

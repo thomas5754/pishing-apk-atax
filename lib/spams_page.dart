@@ -292,7 +292,7 @@ class _ReportWaPageState extends State<ReportWaPage> {
             children: [
               CircleAvatar(
                 backgroundColor: _primaryPink.withOpacity(0.2),
-                child: Icon(FontAwesomeIcons.userAstronaut, color: _primaryPink, size: 20),
+                child: FaIcon(FontAwesomeIcons.userAstronaut, color: _primaryPink, size: 20),
               ),
               const SizedBox(width: 15),
               Column(
