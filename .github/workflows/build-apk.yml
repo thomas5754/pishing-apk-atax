@@ -23,7 +23,9 @@ jobs:
         run: flutter --version
 
       - name: Get dependencies
-        run: flutter pub get
+        run: |
+          rm -f pubspec.lock
+          flutter pub get
 
       - name: Build APK
         run: flutter build apk --release
