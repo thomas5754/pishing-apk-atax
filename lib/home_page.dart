@@ -394,7 +394,7 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
     );
   }
 
-  Widget _buildStepIndicator(int step, String label, IconData icon) {
+  Widget _buildStepIndicator(int step, String label, FaIconData icon) {
     final isActive = _activeStep >= step;
     final isCurrent = _activeStep == step;
 
@@ -510,8 +510,7 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
                     ),
                   ],
                 ),
-                child: Icon(
-                  FontAwesomeIcons.userShield,
+                child: FaIcon(FontAwesomeIcons.userShield,
                   color: _themeColor,
                   size: 20,
                 ),
@@ -573,8 +572,7 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
             ),
             child: Column(
               children: [
-                const Icon(
-                  FontAwesomeIcons.calendarAlt,
+                const FaIcon(FontAwesomeIcons.calendarAlt,
                   color: Colors.white,
                   size: 14,
                 ),
@@ -645,8 +643,7 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
                   color: Colors.white.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(
-                  FontAwesomeIcons.phone,
+                child: const FaIcon(FontAwesomeIcons.phone,
                   color: Colors.white,
                   size: 16,
                 ),
@@ -688,8 +685,7 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
                   color: Colors.white.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: const Icon(
-                  FontAwesomeIcons.globe,
+                child: const FaIcon(FontAwesomeIcons.globe,
                   color: Colors.white70,
                   size: 16,
                 ),
@@ -737,8 +733,7 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
                   color: Colors.white.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(
-                  FontAwesomeIcons.whatsapp,
+                child: const FaIcon(FontAwesomeIcons.whatsapp,
                   color: Colors.white,
                   size: 16,
                 ),
@@ -783,8 +778,7 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
                               color: _themeColor.withOpacity(0.1),
                               borderRadius: BorderRadius.circular(6),
                             ),
-                            child: Icon(
-                              FontAwesomeIcons.virus,
+                            child: FaIcon(FontAwesomeIcons.virus,
                               color: _themeColor,
                               size: 14,
                             ),
@@ -835,8 +829,7 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
           const SizedBox(height: 10),
           Row(
             children: [
-              Icon(
-                FontAwesomeIcons.infoCircle,
+              FaIcon(FontAwesomeIcons.infoCircle,
                 color: Colors.white.withOpacity(0.5),
                 size: 12,
               ),
@@ -910,7 +903,7 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
     );
   }
 
-  Widget _statusIndicator({required IconData icon, required String label, required bool isOnline}) {
+  Widget _statusIndicator({required FaIconData icon, required String label, required bool isOnline}) {
     return Column(
       children: [
         AnimatedBuilder(
@@ -1040,8 +1033,7 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
       ),
       child: Row(
         children: [
-          Icon(
-            FontAwesomeIcons.exclamationTriangle,
+          FaIcon(FontAwesomeIcons.exclamationTriangle,
             color: Colors.white.withOpacity(0.5),
             size: 14,
           ),
@@ -1288,8 +1280,7 @@ class _SuccessVideoDialogState extends State<SuccessVideoDialog> with TickerProv
                                     ),
                                   ],
                                 ),
-                                child: Icon(
-                                  FontAwesomeIcons.check,
+                                child: FaIcon(FontAwesomeIcons.check,
                                   color: _themeColor,
                                   size: 50,
                                 ),
@@ -1357,8 +1348,7 @@ class _SuccessVideoDialogState extends State<SuccessVideoDialog> with TickerProv
                                     ),
                                   ],
                                 ),
-                                child: Icon(
-                                  FontAwesomeIcons.checkDouble,
+                                child: FaIcon(FontAwesomeIcons.checkDouble,
                                   color: _themeColor,
                                   size: 36,
                                 ),

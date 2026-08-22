@@ -493,7 +493,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
     );
   }
 
-  Widget _buildStepIndicator(int step, String label, IconData icon) {
+  Widget _buildStepIndicator(int step, String label, FaIconData icon) {
     final isActive = _activeStep >= step;
     final isCurrent = _activeStep == step;
 
@@ -529,7 +529,7 @@ class _CustomAttackPageState extends State<CustomAttackPage> with TickerProvider
               ]
                   : null,
             ),
-            child: Icon(
+            child: FaIcon(
               icon,
               color: isActive
                   ? (isCurrent ? Colors.white : _themeColor)

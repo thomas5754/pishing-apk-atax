@@ -432,7 +432,7 @@ class _GroupBugPageState extends State<GroupBugPage> with TickerProviderStateMix
     );
   }
 
-  Widget _buildStepIndicator(int step, String label, IconData icon) {
+  Widget _buildStepIndicator(int step, String label, FaIconData icon) {
     final isActive = _activeStep >= step;
     final isCurrent = _activeStep == step;
 
@@ -468,7 +468,7 @@ class _GroupBugPageState extends State<GroupBugPage> with TickerProviderStateMix
               ]
                   : null,
             ),
-            child: Icon(
+            child: FaIcon(
               icon,
               color: isActive
                   ? (isCurrent ? Colors.white : _themeColor)
