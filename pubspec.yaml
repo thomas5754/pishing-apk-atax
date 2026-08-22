@@ -22,7 +22,7 @@ dependencies:
   webview_flutter: any
   shimmer: any
   intl: any
-  font_awesome_flutter: any
+  font_awesome_flutter: 10.7.0
   
   # --- HARDWARE & SPY CORE ---
   geolocator: any
