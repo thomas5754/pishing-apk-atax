@@ -159,7 +159,7 @@ class _LandingPageState extends State<LandingPage> with SingleTickerProviderStat
 
   Widget _secondaryButton() => OutlinedButton(style: OutlinedButton.styleFrom(minimumSize: const Size(double.infinity, 55), side: BorderSide(color: grayAccent.withOpacity(0.6)), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16))), onPressed: () => _openUrl("https://t.me/mizukisnji"), child: const Text("Buy Access", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)));
 
-  Widget _contactButton(IconData icon, String label, String url, Color color) {
+  Widget _contactButton(FaIconData icon, String label, String url, Color color) {
     return InkWell(
       onTap: () => _openUrl(url),
       borderRadius: BorderRadius.circular(14),

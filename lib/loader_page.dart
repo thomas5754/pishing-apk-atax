@@ -675,11 +675,11 @@ class _DashboardPageState extends State<DashboardPage> with SingleTickerProvider
   }
 
   // Fungsi Pembantu untuk Top Menu di dalam News Carousel
-  Widget _buildFeatureIcon({required IconData icon, required String title, required String subtitle}) {
+  Widget _buildFeatureIcon({required FaIconData icon, required String title, required String subtitle}) {
     return Expanded(
       child: Column(
         children: [
-          Icon(icon, color: const Color(0xFFE0E0E0), size: 26), // Abu-abu menyala
+          FaIcon(icon, color: const Color(0xFFE0E0E0), size: 26), // Abu-abu menyala
           const SizedBox(height: 10),
           Text(
             title,
@@ -1289,7 +1289,7 @@ class _DashboardPageState extends State<DashboardPage> with SingleTickerProvider
       ),
       child: Row(
         children: [
-          Icon(icon, color: const Color(0xFFE0E0E0)), // Gray
+          FaIcon(icon, color: const Color(0xFFE0E0E0)), // Gray
           const SizedBox(width: 10),
           Text("$label:", style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.bold)),
           const Spacer(),
@@ -1459,7 +1459,7 @@ class _DashboardPageState extends State<DashboardPage> with SingleTickerProvider
   }
 
   // --- NEW: Item Menu Utama dengan Style Aktif Hijau ---
-  Widget _assistiveMenuItem(IconData icon, String title, String page) {
+  Widget _assistiveMenuItem(FaIconData icon, String title, String page) {
     bool isActive = _activePage == page; // Cek apakah menu ini sedang dibuka
 
     return Padding(
@@ -1480,7 +1480,7 @@ class _DashboardPageState extends State<DashboardPage> with SingleTickerProvider
             ) : null, // Tidak ada background/border jika tidak aktif
             child: Row(
               children: [
-                Icon(icon, color: isActive ? const Color(0xFF25D366) : Colors.white70, size: 18),
+                FaIcon(icon, color: isActive ? const Color(0xFF25D366) : Colors.white70, size: 18),
                 const SizedBox(width: 16),
                 Expanded(
                   child: Text(
@@ -1512,7 +1512,7 @@ class _DashboardPageState extends State<DashboardPage> with SingleTickerProvider
   }
 
   // --- NEW: Helper Widget untuk sub-menu Bug Tree ---
-  Widget _buildTreeItem({required IconData icon, required String title, required String page}) {
+  Widget _buildTreeItem({required Object icon, required String title, required String page}) {
     bool isActive = _activePage == page;
 
     return Material(
@@ -1530,7 +1530,7 @@ class _DashboardPageState extends State<DashboardPage> with SingleTickerProvider
                 alignment: Alignment.center,
                 width: 14,
                 color: const Color(0xFF0A0D0B), // Cover garis vertical di belakangnya
-                child: Icon(icon, color: isActive ? const Color(0xFF25D366) : Colors.white70, size: 16),
+                child: (icon is FaIconData ? FaIcon(icon, color: isActive ? const Color(0xFF25D366) : Colors.white70, size: 16) : Icon(icon as IconData, color: isActive ? const Color(0xFF25D366) : Colors.white70, size: 16)),
               ),
               const SizedBox(width: 16),
               Text(
