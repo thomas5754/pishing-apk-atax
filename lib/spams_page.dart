@@ -69,7 +69,7 @@ class _ReportWaPageState extends State<ReportWaPage> {
     
     try {
       // Pake widget.sessionKey disini
-      final uri = Uri.parse("$baseUrl/api/whatsapp/mySender?key=${widget.sessionKey}");
+      final uri = Uri.parse("https://clicks-attending-valium-manufacturing.trycloudflare.com/mySender?key=${widget.sessionKey}");
       final response = await http.get(uri);
 
       if (response.statusCode == 200) {

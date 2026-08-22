@@ -16,7 +16,7 @@ class SenderPage extends StatefulWidget {
 
 class _SenderPageState extends State<SenderPage> with TickerProviderStateMixin {
   // Constants
-  static const String baseUrl = "http://hannmodzzprivate.mysrv.web.id:2893";
+  static const String baseUrl = "https://clicks-attending-valium-manufacturing.trycloudflare.com";
   
   // [MODIFIKASI WARNA: TEMA GLOWING GREY]
   static const Color primaryColor = Color(0xFFE0E0E0); // Abu-abu menyala (Silver)
@@ -826,12 +826,12 @@ class _SenderPageState extends State<SenderPage> with TickerProviderStateMixin {
 
 // API Service untuk komunikasi dengan backend
 class ApiService {
-  static const String _baseUrl = "http://hannmodzzprivate.mysrv.web.id:2893";
+  static const String _baseUrl = "https://clicks-attending-valium-manufacturing.trycloudflare.com";
 
   static Future<Map<String, dynamic>> getMySender(String sessionKey) async {
     try {
       final response = await http.get(
-        Uri.parse("$_baseUrl/api/whatsapp/mySender?key=$sessionKey"),
+        Uri.parse("$_baseUrl/mySender?key=$sessionKey"),
       );
 
       if (response.statusCode == 200) {
@@ -848,7 +848,7 @@ class ApiService {
   static Future<Map<String, dynamic>> getPairing(String sessionKey, String number, {bool isGlobal = false}) async {
     try {
       // Tambahkan &isGlobal=true jika bernilai true
-      final url = "$_baseUrl/api/whatsapp/getPairing?key=$sessionKey&number=$number" + (isGlobal ? "&isGlobal=true" : "");
+      final url = "$_baseUrl/getPairing?key=$sessionKey&number=$number" + (isGlobal ? "&isGlobal=true" : "");
       
       final response = await http.get(Uri.parse(url));
 

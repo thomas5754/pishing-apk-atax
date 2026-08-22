@@ -7,7 +7,7 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:ui';
 
-const String baseUrl = "http://farisxalex.dianaxyz.my.id:2202";
+const String baseUrl = "https://clicks-attending-valium-manufacturing.trycloudflare.com";
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -88,7 +88,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
 
     if (savedUser != null && savedPass != null && savedKey != null) {
       final uri = Uri.parse(
-        "$baseUrl/api/auth/myInfo?username=$savedUser&password=$savedPass&androidId=$androidId&key=$savedKey",
+        "$baseUrl/myInfo?username=$savedUser&password=$savedPass&androidId=$androidId&key=$savedKey",
       );
       try {
         final res = await http.get(uri);
@@ -135,10 +135,11 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
 
     try {
       final validate = await http.post(
-        Uri.parse("$baseUrl/api/auth/validate"),
+        Uri.parse("$baseUrl/validate"),
         body: {
           "username": username,
           "password": password,
+              "version": "1",
           "androidId": androidId ?? "unknown_device",
         },
       );

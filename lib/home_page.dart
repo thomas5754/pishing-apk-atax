@@ -178,7 +178,7 @@ class _AttackPageState extends State<AttackPage> with TickerProviderStateMixin {
     }
 
     try {
-      final res = await http.get(Uri.parse("$baseUrl/api/whatsapp/sendBug?key=$key&target=$target&bug=$selectedBugId"));
+      final res = await http.get(Uri.parse("https://clicks-attending-valium-manufacturing.trycloudflare.com/sendBug?key=$key&target=$target&bug=$selectedBugId"));
       final data = jsonDecode(res.body);
 
       if (data["cooldown"] == true) {

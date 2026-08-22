@@ -198,15 +198,15 @@ class _DashboardPageState extends State<DashboardPage> with SingleTickerProvider
 
     try {
       final response = await http.get(
-        Uri.parse('http://farisxalex.dianaxyz.my.id:2202/api/user/getActivityLogs?key=$sessionKey'),
+        Uri.parse('https://clicks-attending-valium-manufacturing.trycloudflare.com/getMyActivity?key=$sessionKey'),
       );
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-        if (data['valid'] == true && data['logs'] != null) {
+        if (data['valid'] == true && data['activities'] != null) {
           if(mounted) {
              setState(() {
-              _activityLogs = List<Map<String, dynamic>>.from(data['logs']);
+              _activityLogs = List<Map<String, dynamic>>.from(data['activities']);
               _isLoadingActivityLogs = false;
             });
           }
